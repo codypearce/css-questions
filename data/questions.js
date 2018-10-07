@@ -1,4 +1,4 @@
-const question = [
+const questions = [
   {
     id: 1,
     question:
@@ -29,9 +29,11 @@ const question = [
   {
     id: 4,
     question:
-      "Does :after create an element before the element’s other children?",
+      "Does ::after create an element before the element’s other children?",
     answer:
       "No it creates it after all children in the element including :before and actual elements",
     position: 4
   }
 ];
+
+module.exports = questions;
