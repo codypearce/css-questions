@@ -13,5 +13,9 @@ app.get("/api/v1/random", (req, res) => {
   res.json(questions[randomNumber]);
 });
 
+app.get("/api/v1/:questionId", (req, res) => {
+  res.json(questions[req.params.questionId]);
+});
+
 const port = 5000;
 app.listen(port, () => console.log("listening on port ", 5000));
