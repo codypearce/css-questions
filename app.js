@@ -17,5 +17,23 @@ app.get("/api/v1/:questionId", (req, res) => {
   res.json(questions[req.params.questionId]);
 });
 
+app.get("/api/v1/tags/:questionTags", (req, res) => {
+  const tags = req.params.questionTags.split(",");
+  let filteredQuestions;
+  if (tags.length > 1) {
+    filteredQuestions = questions.filter(question => {
+      const filteredTags = question.tags.map(tag => {
+        if (tags.includes(tag)) return true;
+      });
+      return filteredTags.length > 0;
+    });
+  } else {
+    filteredQuestions = questions.filter(question =>
+      question.tags.includes(tags[0])
+    );
+  }
+  res.json(filteredQuestions);
+});
+
 const port = 5000;
 app.listen(port, () => console.log("listening on port ", 5000));
