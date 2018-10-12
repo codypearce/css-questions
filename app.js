@@ -37,3 +37,4 @@ app.get("/api/v1/tags/:questionTags", (req, res) => {
 
 const port = 5000;
 app.listen(port, () => console.log("listening on port ", 5000));
+module.exports = app;
