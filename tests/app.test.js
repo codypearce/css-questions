@@ -18,4 +18,9 @@ describe("App Tests", () => {
     expect(response.statusCode).toBe(200);
     expect(response.body).toEqual(questions[1]);
   });
+  test("GET /api/v1/tags/:questionTags", async () => {
+    const response = await request(app).get("/api/v1/tags/pseudo%20elements");
+    expect(response.statusCode).toBe(200);
+    expect(response.body[0]).toEqual(questions[3]);
+  });
 });
