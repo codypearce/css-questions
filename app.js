@@ -3,6 +3,12 @@ const app = express();
 const questions = require("./data/questions");
 const getRandomInt = require("./src/utils/getRandomInt");
 
+app.set("view engine", "pug");
+
+app.get("/", function(req, res) {
+  res.render("index");
+});
+
 app.get("/api/v1/all", (req, res) => {
   res.json(questions);
 });
@@ -35,6 +41,6 @@ app.get("/api/v1/tags/:questionTags", (req, res) => {
   res.json(filteredQuestions);
 });
 
-const port = 5000;
-app.listen(port, () => console.log("listening on port ", 5000));
+const port = 3000;
+app.listen(port, () => console.log("listening on port ", port));
 module.exports = app;
