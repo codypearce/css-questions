@@ -1,5 +1,7 @@
-html
-  head
-    title Test
-  body
-    h1 CSS Questions
+extends ./layout.pug
+
+block body
+    h1 CSS questions
+    ol
+        each question in questions
+            li= question.question

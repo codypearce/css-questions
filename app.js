@@ -6,7 +6,7 @@ const getRandomInt = require("./src/utils/getRandomInt");
 app.set("view engine", "pug");
 
 app.get("/", function(req, res) {
-  res.render("index");
+  res.render("index", { questions });
 });
 
 app.get("/api/v1/all", (req, res) => {
