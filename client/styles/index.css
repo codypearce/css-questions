@@ -108,6 +108,26 @@ ul {
   margin: auto;
 }
 
+.api--header {
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.api {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-bottom: 25px;
+}
+.api__url,
+.api__description,
+.api__example {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
 @media (max-width: 900px) {
   .container {
     width: 80%;

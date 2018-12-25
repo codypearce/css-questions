@@ -14,6 +14,10 @@ app.get("/", function(req, res) {
   res.render("index", { questions });
 });
 
+app.get("/api", function(req, res) {
+  res.render("api");
+});
+
 app.get("/about", function(req, res) {
   res.render("about");
 });
@@ -29,7 +33,7 @@ app.get("/api/v1/random", (req, res) => {
 });
 
 app.get("/api/v1/:questionId", (req, res) => {
-  res.json(questions[req.params.questionId]);
+  res.json(questions[req.params.questionId - 1]);
 });
 
 app.get("/api/v1/tags/:questionTags", (req, res) => {

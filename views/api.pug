@@ -1,0 +1,25 @@
+extends ./layout.pug
+
+block body
+    main.container
+        include partials/header.pug
+        
+        h2 API
+        p Simple JSON API that provides CSS questions.
+
+        .api.api--header
+            .api__url URL
+            .api__description Description
+            .api__example Example
+        .api
+            code.api__url /api/v1/all
+            .api__description Returns full list as array
+            a(href="/api/v1/all").api__example cssquestions.io/api/v1/all
+        .api
+            code.api__url /api/v1/:id
+            .api__description Returns specific question
+            a(href="/api/v1/13").api__example cssquestions.io/api/v1/13
+        .api
+            code.api__url /api/v1/random
+            .api__description Returns random question
+            a(href="/api/v1/random").api__example cssquestions.io/api/v1/random
