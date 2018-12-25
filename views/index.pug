@@ -4,4 +4,7 @@ block body
     h1 CSS questions
     ol
         each question in questions
-            li= question.question
+            li
+                span= question.question
+                button Answer
+                p= question.answer
