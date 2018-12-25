@@ -126,10 +126,17 @@ ul {
 .api__example {
   flex-grow: 1;
   flex-basis: 0;
+  min-width: 33.33%;
 }
 
 @media (max-width: 900px) {
   .container {
     width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .api__example {
+    display: none;
   }
 }
