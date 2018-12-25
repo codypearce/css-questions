@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+html,
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+}
+
+.container {
+  margin: 120px auto 60px auto;
+  width: 50%;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-family: Raleway, Lato, sans-serif;
+  margin: 0;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-left: 0;
+}
+
+.menu__link {
+  color: #444;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: 2px solid white;
+  font-size: 16px;
+  margin: 0 12px;
+  letter-spacing: 1px;
+}
+.menu__link:active,
+.menu__link:focus {
+  color: #444;
+}
+.menu__link:hover {
+  border-bottom: 2px solid #222;
+  box-sizing: border-box;
+  color: #222;
+}
+
+.question {
+  margin-bottom: 26px;
+  max-height: 76px;
+}
+.question__question {
+  font-size: 16px;
+}
+
+.question__answer {
+  opacity: 0;
+  transition: all ease 0.2s;
+  max-height: 0;
+  overflow: hidden;
+  color: #444;
+
+  line-height: 1.5;
+  display: block;
+  font-size: 14px;
+}
+.question__answer--show {
+  opacity: 1;
+  max-height: 50px;
+}
+
+.question__button {
+  border: 0;
+  margin-left: 10px;
+  line-height: 18px;
+  font-size: 12px;
+  text-transform: uppercase;
+  min-width: 60px;
+  transition: all ease 0.3s;
+}
+.question__button:focus,
+.question__button:active {
+  outline: 0;
+  border: 0;
+}
+
+.question__button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}

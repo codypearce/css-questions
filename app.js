@@ -4,6 +4,7 @@ const questions = require("./data/questions");
 const getRandomInt = require("./src/utils/getRandomInt");
 
 app.set("view engine", "pug");
+app.use(express.static("client"));
 
 app.get("/", function(req, res) {
   res.render("index", { questions });

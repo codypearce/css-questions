@@ -1,10 +1,14 @@
 extends ./layout.pug
 
 block body
-    h1 CSS questions
-    ol
-        each question in questions
-            li
-                span= question.question
-                button Answer
-                p= question.answer
+    main.container
+        h1.title CSS Questions
+        menu.menu
+            a(href="/" class="menu__link") Home
+            a(href="/about" class="menu__link") About
+        ol
+            each question in questions
+                li.question
+                    span(class="question__question")= question.question
+                    button.question__button Answer
+                    p(class="question__answer")= question.answer
