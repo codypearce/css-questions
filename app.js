@@ -46,6 +46,10 @@ app.get("/api/v1/tags/:questionTags", (req, res) => {
   res.json(filteredQuestions);
 });
 
+app.get("*", function(req, res) {
+  res.render("notfound", { questions });
+});
+
 const port = 3000;
 app.listen(port, () => console.log("listening on port ", port));
 module.exports = app;

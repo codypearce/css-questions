@@ -103,6 +103,11 @@ ul {
   cursor: pointer;
 }
 
+.center {
+  text-align: center;
+  margin: auto;
+}
+
 @media (max-width: 900px) {
   .container {
     width: 80%;
