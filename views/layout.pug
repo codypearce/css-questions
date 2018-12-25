@@ -7,3 +7,10 @@ html
     block body
     
     script(src="js/index.js")
+    script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-73073769-6')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-73073769-6');
+
