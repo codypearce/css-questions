@@ -10,6 +10,10 @@ app.get("/", function(req, res) {
   res.render("index", { questions });
 });
 
+app.get("/about", function(req, res) {
+  res.render("about");
+});
+
 app.get("/api/v1/all", (req, res) => {
   res.json(questions);
 });

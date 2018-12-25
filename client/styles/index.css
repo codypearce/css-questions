@@ -16,6 +16,7 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+  list-style-position: inside;
 }
 
 .title {
@@ -58,10 +59,10 @@ ul {
 
 .question {
   margin-bottom: 26px;
-  max-height: 76px;
 }
 .question__question {
   font-size: 16px;
+  margin-left: 4px;
 }
 
 .question__answer {
@@ -77,17 +78,20 @@ ul {
 }
 .question__answer--show {
   opacity: 1;
-  max-height: 50px;
+  max-height: 200px;
 }
 
 .question__button {
   border: 0;
-  margin-left: 10px;
   line-height: 18px;
   font-size: 12px;
   text-transform: uppercase;
-  min-width: 60px;
+  width: 66px;
   transition: all ease 0.3s;
+  display: inline-block;
+  color: #444;
+  font-weight: bold;
+  background: none;
 }
 .question__button:focus,
 .question__button:active {
@@ -96,6 +100,11 @@ ul {
 }
 
 .question__button:hover {
-  font-weight: bold;
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 80%;
+  }
 }
