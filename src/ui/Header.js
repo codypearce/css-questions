@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Github from "./Github";
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
           About
         </Link>
       </menu>
+      <Github className="Header__github" />
     </header>
   );
 };

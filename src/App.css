@@ -127,6 +127,17 @@ ol .question__card {
   margin: auto;
 }
 
+.Header__github {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0.7;
+}
+
+.Header__github:hover {
+  opacity: 1;
+}
+
 @media (max-width: 900px) {
   .container {
     width: 80%;
