@@ -8,8 +8,12 @@ body {
 }
 
 .container {
-  margin: 120px auto 60px auto;
+  margin: 80px auto 60px auto;
   width: 50%;
+}
+
+.header {
+  margin-top: 80px;
 }
 
 ol,
@@ -108,35 +112,8 @@ ul {
   margin: auto;
 }
 
-.api--header {
-  font-weight: bold;
-  margin-top: 50px;
-}
-
-.api {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  flex-basis: 0;
-  margin-bottom: 25px;
-}
-.api__url,
-.api__description,
-.api__example {
-  flex-grow: 1;
-  flex-basis: 0;
-  min-width: 33.33%;
-}
-
 @media (max-width: 900px) {
   .container {
     width: 80%;
-  }
-}
-
-@media (max-width: 600px) {
-  .api__example {
-    display: none;
   }
 }
