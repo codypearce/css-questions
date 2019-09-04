@@ -84,6 +84,14 @@ ol .question__card {
   padding: 24px;
   width: 100%;
   background-color: white;
+  transition: 0.4s ease all;
+  border-radius: 4px;
+}
+.question__card:hover {
+  box-shadow: 0 0 2px rgba(240, 242, 247, 0.1),
+    0 12px 24px rgba(0, 32, 128, 0.1);
+  cursor: pointer;
+  transform: scale(1.02);
 }
 .question__question {
   font-size: 16px;
