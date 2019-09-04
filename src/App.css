@@ -91,10 +91,10 @@ ol .question__card {
   will-change: auto;
 }
 .question__card:hover {
-  box-shadow: 0 0 2px rgba(240, 242, 247, 0.1),
-    0 12px 24px rgba(0, 32, 128, 0.1);
+  box-shadow: 0 0 2px rgba(240, 242, 247, 0.15),
+    0 12px 24px rgba(0, 32, 128, 0.15);
   cursor: pointer;
-  transform: translateZ(0) scale(1.03);
+  /* transform: translateZ(0) scale(1.03); */
   backface-visibility: hidden;
 }
 .question__card:active {
@@ -111,41 +111,15 @@ ol .question__card {
 }
 
 .question__answer {
-  opacity: 0;
-  transition: all ease 0.2s;
-  max-height: 0;
-  overflow: hidden;
+  opacity: 1;
+  transition: 0.3s ease all;
+
   color: #444;
 
   line-height: 1.5;
   display: block;
   font-size: 14px;
-}
-.question__answer--show {
-  opacity: 1;
-  max-height: 200px;
-}
-
-.question__button {
-  border: 0;
-  line-height: 18px;
-  font-size: 12px;
-  text-transform: uppercase;
-  width: 66px;
-  transition: all ease 0.3s;
-  display: inline-block;
-  color: #444;
-  font-weight: bold;
-  background: none;
-}
-.question__button:focus,
-.question__button:active {
-  outline: 0;
-  border: 0;
-}
-
-.question__button:hover {
-  cursor: pointer;
+  margin-top: 8px;
 }
 
 .center {
