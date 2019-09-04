@@ -1,8 +1,18 @@
 # [CSS Questions](http://cssquestions.io/)
 
-[cssquestions.io](http://cssquestions.io/)
 
 A list of 140 CSS questions. Written while reading the MDN CSS docs.
+
+## Sample
+
+1. Does the proximity of an element to another element have any effect on levels of specificity?
+2. What does LVHA mean in CSS?
+
+...
+
+78. What does :not(*) select?
+79. What are the named default animation timing functions?
+
 
 ## API
 
