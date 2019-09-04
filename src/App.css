@@ -5,6 +5,7 @@ html,
 body {
   margin: 0;
   font-family: Lato, sans-serif;
+  background-color: #f5f6fa;
 }
 
 .container {
@@ -46,7 +47,7 @@ ul {
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid transparent;
   font-size: 16px;
   margin: 0 12px;
   letter-spacing: 1px;
@@ -61,12 +62,19 @@ ul {
   color: #222;
 }
 
+ol .question {
+  list-style-type: none;
+}
+
 .question {
   margin-bottom: 26px;
+  box-shadow: 0 0 1px rgba(240, 242, 247, 0.1), 0 6px 12px rgba(0, 32, 128, 0.1);
+  padding: 24px;
 }
 .question__question {
   font-size: 16px;
-  margin-left: 4px;
+  font-weight: 700;
+  color: #1f253d;
 }
 
 .question__answer {
