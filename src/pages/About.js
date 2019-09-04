@@ -1,16 +1,12 @@
 import React from "react";
+import Github from "../ui/Github";
 
 const About = () => {
   return (
     <main className="container">
       <h2>About</h2>
       <p>Just CSS questions and answers.</p>
-      <p>
-        Any issues or comments can be added to{" "}
-        <a href="https://github.com/codypearce/css-questions">
-          https://github.com/codypearce/css-questions
-        </a>
-      </p>
+      <Github />
     </main>
   );
 };

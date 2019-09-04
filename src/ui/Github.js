@@ -4,7 +4,7 @@ const Github = ({ className, style }) => {
   return (
     <a
       href="https://github.com/codypearce/css-questions"
-      className={className}
+      className={`Github ${className}`}
       style={style}
     >
       <svg
