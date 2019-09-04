@@ -73,6 +73,7 @@ ul {
   font-weight: 700;
   font-size: 20px;
   margin-right: 16px;
+  width: 40px;
 }
 
 ol .question__card {
@@ -86,17 +87,21 @@ ol .question__card {
   background-color: white;
   transition: 0.4s ease all;
   border-radius: 4px;
+  backface-visibility: hidden;
+  will-change: auto;
 }
 .question__card:hover {
   box-shadow: 0 0 2px rgba(240, 242, 247, 0.1),
     0 12px 24px rgba(0, 32, 128, 0.1);
   cursor: pointer;
-  transform: scale(1.02);
+  transform: translateZ(0) scale(1.03);
+  backface-visibility: hidden;
 }
 .question__question {
   font-size: 16px;
   font-weight: 700;
   color: #1f253d;
+  backface-visibility: hidden;
 }
 
 .question__answer {
