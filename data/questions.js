@@ -1116,7 +1116,7 @@ const questions = [
     id: 140,
     question: "What level of specificity do media queries add?",
     answer:
-      "None, they are usually declared later in the document to be applied.",
+      "It doesn't add any",
     position: 140,
     tags: ["at rules"]
   }
