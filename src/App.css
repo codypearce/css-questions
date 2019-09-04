@@ -97,6 +97,12 @@ ol .question__card {
   transform: translateZ(0) scale(1.03);
   backface-visibility: hidden;
 }
+.question__card:active {
+  box-shadow: 0 0 1px rgba(240, 242, 247, 0.1), 0 6px 12px rgba(0, 32, 128, 0.1);
+  cursor: pointer;
+  background-color: #f1f1f1;
+}
+
 .question__question {
   font-size: 16px;
   font-weight: 700;
