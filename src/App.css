@@ -62,14 +62,27 @@ ul {
   color: #222;
 }
 
-ol .question {
+.question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.question__number {
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+ol .question__card {
   list-style-type: none;
 }
 
-.question {
-  margin-bottom: 26px;
+.question__card {
   box-shadow: 0 0 1px rgba(240, 242, 247, 0.1), 0 6px 12px rgba(0, 32, 128, 0.1);
   padding: 24px;
+  width: 100%;
 }
 .question__question {
   font-size: 16px;
