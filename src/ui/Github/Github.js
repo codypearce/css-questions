@@ -1,4 +1,5 @@
 import React from "react";
+import "./Github.css";
 
 const Github = ({ className, style }) => {
   return (

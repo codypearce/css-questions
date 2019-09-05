@@ -1,0 +1,41 @@
+.header {
+  margin-top: 80px;
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  font-family: Raleway, Lato, sans-serif;
+  margin: 0;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-left: 0;
+}
+
+.menu__link {
+  color: #444;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  font-size: 16px;
+  margin: 0 12px;
+  letter-spacing: 1px;
+}
+.menu__link:active,
+.menu__link:focus {
+  color: #444;
+}
+.menu__link:hover {
+  border-bottom: 2px solid #222;
+  box-sizing: border-box;
+  color: #222;
+}

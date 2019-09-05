@@ -1,5 +1,5 @@
 import React from "react";
-import Github from "../ui/Github";
+import Github from "../ui/Github/Github";
 
 const About = () => {
   return (

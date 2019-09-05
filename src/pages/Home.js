@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import questions from "../questions/index";
-import Question from "../ui/Question";
-import QuestionsHeader from "../ui/QuestionsHeader";
+import Question from "../ui/Question/Question";
+import QuestionsHeader from "../ui/QuestionsHeader/QuestionsHeader";
 
 const Home = () => {
   const [items, setItems] = useState([]);

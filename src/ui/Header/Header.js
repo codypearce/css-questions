@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Github from "./Github";
+import Github from "../Github/Github";
+import "./Header.css";
 
 const Header = () => {
   return (

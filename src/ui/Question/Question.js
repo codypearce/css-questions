@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Collapsible from "./Collapsible";
+import Collapsible from "../Collapsible";
+import "./Question.css";
 
 const Question = ({ question, handleItems, items }) => {
   const [hidden, setHidden] = useState(true);

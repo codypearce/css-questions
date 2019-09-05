@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useWindowScroll from "@react-hook/window-scroll";
+import "./QuestionsHeader.css";
 
 const QuestionsHeader = ({ items, questions, isFixed }) => {
   const scrollY = useWindowScroll(60);
