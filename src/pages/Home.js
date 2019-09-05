@@ -17,6 +17,7 @@ const Home = () => {
   return (
     <main className="container">
       <QuestionsHeader items={items} questions={questions} />
+      <QuestionsHeader items={items} questions={questions} isFixed />
       <ol>
         {questions.map(question => (
           <Question
