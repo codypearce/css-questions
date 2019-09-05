@@ -15,6 +15,12 @@ const Home = () => {
   console.log(items);
   return (
     <main className="container">
+      <div className="questions__header">
+        <span>
+          {!items ? 0 : items.length}/{questions.length}
+        </span>
+        <button className="questions__header__clear">Clear</button>
+      </div>
       <ol>
         {questions.map(question => (
           <Question
