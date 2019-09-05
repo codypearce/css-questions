@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import questions from "../questions/index";
 import Question from "../ui/Question";
+import QuestionsHeader from "../ui/QuestionsHeader";
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -12,15 +13,10 @@ const Home = () => {
       setItems([...items, questionId]);
     }
   };
-  console.log(items);
+
   return (
     <main className="container">
-      <div className="questions__header">
-        <span>
-          {!items ? 0 : items.length}/{questions.length}
-        </span>
-        <button className="questions__header__clear">Clear</button>
-      </div>
+      <QuestionsHeader items={items} questions={questions} />
       <ol>
         {questions.map(question => (
           <Question
