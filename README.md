@@ -1,5 +1,7 @@
 # [CSS Questions](http://cssquestions.io/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bd89e375-2895-4019-b2be-778403541b51/deploy-status)](https://app.netlify.com/sites/pedantic-ritchie-9c08b4/deploys)
+
 A list of 140 CSS questions and answers. Written while reading the MDN CSS docs.
 
 <p style="margin-bottom: 0px !important;">
