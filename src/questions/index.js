@@ -2,8 +2,9 @@ const questions = [
   {
     id: 1,
     question:
-      "Does the proximity of an element to another element have any effect on levels of specificity?",
-    answer: "No, using 'p div' and 'html div' have the same specificity.",
+      "Does the proximity of elements have any effect on specificity? For example is 'main div' more specific than 'html div'?",
+    answer:
+      "No, elements that are closer together do not have more specificity than elements that are farther away in the DOM. 'main div' and 'html div' have the same specificity, therefore 'html div' would override 'main div' if declared later.",
     position: 1,
     tags: ["specificity"]
   },
@@ -11,16 +12,16 @@ const questions = [
     id: 2,
     question: "What does LVHA mean in CSS?",
     answer:
-      "LVHA is the order of link-related pseudo-classes, :link, :visited, :hover, and :active. For equal specificity, the rules will be overridden unless you follow the LVHA order.",
+      "LVHA is the order of link-related pseudo-classes precendence, :link, :visited, :hover, and :active. For selectors that have equal specificity, some rules will be overridden unless you follow the LVHA order.",
     position: 2,
     tags: ["specificity"]
   },
   {
     id: 3,
     question:
-      "If I create a rule for :active and then another rule for :visited which will be used?",
+      "If I create a rule for :active and then another rule for :visited which will be applied?",
     answer:
-      "Unless :active is declared after it will be the :visited. :active wil be overridden by any of the LVHA unless it is last.",
+      ":active wil be overridden by any of the LVHA unless it it comes after :visited according to LVHA.",
     position: 3,
     tags: ["specificity"]
   },
@@ -45,7 +46,7 @@ const questions = [
     id: 6,
     question: "Can you add ::before or ::after to an <img>?",
     answer:
-      "No, both of these pseudo elements are contained by the element's formatting box and thus a replaced element like <img> would not work",
+      "No, both of these pseudo elements are contained by the element's formatting box and thus a replaced element like <img> will not have ::before and ::after",
     position: 6,
     tags: ["psuedo elements", "replaced elements"]
   },
@@ -59,9 +60,9 @@ const questions = [
   {
     id: 8,
     question:
-      "Does ::after create an element before the element’s other children?",
+      "Does ::after create an element before or after the element’s other children?",
     answer:
-      "No it creates it after all children in the element including :before and actual elements.",
+      "::after occurs after all children in the element including :before and actual elements.",
     position: 8,
     tags: ["pseudo elements"]
   },
@@ -93,16 +94,16 @@ const questions = [
   {
     id: 12,
     question:
-      "What happens to the vertical margin on a non-floated element when clear: both is specified?",
+      "What happens to the vertical margin on a non-floated element when clear: both is applied?",
     answer:
-      "The vertical margins are collapsed and element is moved below the margins edge of the associated floated elements, ignoring it's own margin.",
+      "The vertical margins are collapsed and the element is moved below the  edge of the associated floated elements, ignoring it's own margin.",
     position: 12,
     tags: ["float"]
   },
   {
     id: 13,
     question:
-      "When line-height property has a number value without a unit, what does the number mean?",
+      "When the line-height property has a number value without a unit, what does the number mean?",
     answer: "The number provided multiplied by the font-size.",
     position: 13,
     tags: ["line height"]
@@ -119,7 +120,7 @@ const questions = [
   {
     id: 15,
     question:
-      "With animation-direction reverse, besides the end state and start state flipping, what else changes?",
+      "When animation-direction: reverse is applied, the end state and start state flipps. What else changes?",
     answer:
       "The Animation timing function will flip, it will go from ease-in to ease-out for example",
     position: 15,
@@ -128,7 +129,7 @@ const questions = [
   {
     id: 16,
     question:
-      "When border-collapse is set to separated, what determines the distance between cells?",
+      "When border-collapse is set to 'separated', what determines the distance between cells?",
     answer: "border-spacing",
     position: 16,
     tags: ["border"]
@@ -145,7 +146,7 @@ const questions = [
   {
     id: 18,
     question:
-      "What is the content box size when you change box-sizing to border-box and have 5px border?",
+      "What is the content box size when you change box-sizing to 'border-box' and have '5px border'?",
     answer:
       "It gets reduced by 5px on all sides, but the height and width now indicate the full size of the object.",
     position: 18,
@@ -196,9 +197,9 @@ const questions = [
   },
   {
     id: 24,
-    question: "Can you display a page’s title with just css?",
+    question: "How can you display a page’s title with just css?",
     answer:
-      "Yes, if you put display block on both head and title elements they will display.",
+      "If you put display: block on both the <head> and <title> elements they will show within in the document.",
     position: 24,
     tags: ["elements"]
   },
@@ -214,7 +215,7 @@ const questions = [
     id: 26,
     question: "What is required for z-index to take effect?",
     answer:
-      "Elements must be positioned (relative, absolute, etc). If it has position static z-index will not have an effect.",
+      "Elements must be positioned (relative, absolute, etc). If it has position: static, z-index will not have an effect.",
     position: 26,
     tags: ["stacking"]
   },
@@ -287,7 +288,7 @@ const questions = [
   {
     id: 35,
     question:
-      "What is the difference between space and round for background-repeat property?",
+      "What is the difference between 'space' and 'round' for background-repeat property?",
     answer:
       "Space leaves even gaps between the images, round fills the space without gaps.",
     position: 35,
@@ -296,9 +297,9 @@ const questions = [
   {
     id: 36,
     question:
-      "What is the difference between contain and cover for background-size?",
+      "What is the difference between 'contain' and 'cover' for background-size?",
     answer:
-      "contain scales the image as much as possible without stretching or cropping the image, cover scales the image as much as possible without stretching the image but it may be cropped",
+      "Contain scales the image as much as possible without stretching or cropping the image, cover scales the image as much as possible without stretching the image but it may be cropped",
     position: 36,
     tags: ["background"]
   },
@@ -321,7 +322,7 @@ const questions = [
   },
   {
     id: 39,
-    question: "What is the default value for hyphens property?",
+    question: "What is the default value for 'hyphens' property?",
     answer: "manual",
     position: 39,
     tags: ["property values"]
@@ -346,7 +347,7 @@ const questions = [
   {
     id: 42,
     question:
-      "If you do not specifiy background-origin in the background shorthand, what happens to the value?",
+      "If you do not specify background-origin in the background shorthand, what happens to the value?",
     answer: "It gets reset to initial value",
     position: 42,
     tags: ["border"]
@@ -402,7 +403,7 @@ const questions = [
     id: 49,
     question: "When are styles not inherited?",
     answer:
-      "When a style is declared on that element. This can be either a default or set explicitly by the user.",
+      "Styles are not inherited when that particular property is explicity declared on the child element either by the user or as a browswer default. For example, <em> does not inherit borders because border-style is set to none by default.",
     position: 49,
     tags: ["inheritance"]
   },

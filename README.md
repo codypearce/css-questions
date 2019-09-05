@@ -4,7 +4,7 @@ A list of 140 CSS questions and answers. Written while reading the MDN CSS docs.
 
 ## Examples
 
-Does the proximity of an element to another element have any effect on levels of specificity?
+Does the proximity elements have any effect on specificity? For example is 'main div' more specific than 'html div'?
 
 What does LVHA mean in CSS?
 
