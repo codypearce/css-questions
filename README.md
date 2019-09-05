@@ -2,6 +2,10 @@
 
 A list of 140 CSS questions and answers. Written while reading the MDN CSS docs.
 
+<p style="margin-bottom: 0px !important;">
+  <img width="800" src="static/site.png" alt="adf" align="center">
+</p>
+
 ## Examples
 
 Does the proximity elements have any effect on specificity? For example is 'main div' more specific than 'html div'?
