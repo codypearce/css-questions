@@ -36,9 +36,14 @@
   pointer-events: all;
 }
 
-.questions__header__clear {
+.question__header__fixed--show .questions__header__reset {
   background-color: #e74c3c;
   color: white;
+}
+
+.questions__header__reset {
+  background-color: transparent;
+  color: #e74c3c;
   border-radius: 4px;
   border: none;
   outline: none;
@@ -49,7 +54,7 @@
   padding: 8px;
 }
 
-.questions__header__clear:hover {
+.questions__header__reset:hover {
   cursor: pointer;
 }
 

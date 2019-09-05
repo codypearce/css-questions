@@ -14,7 +14,7 @@ const Home = () => {
     }
   };
 
-  const clearItems = () => {
+  const resetItems = () => {
     setItems([]);
   };
 
@@ -23,13 +23,13 @@ const Home = () => {
       <QuestionsHeader
         items={items}
         questions={questions}
-        clearItems={clearItems}
+        resetItems={resetItems}
       />
       <QuestionsHeader
         items={items}
         questions={questions}
         isFixed
-        clearItems={clearItems}
+        resetItems={resetItems}
       />
       <ol>
         {questions.map(question => (
