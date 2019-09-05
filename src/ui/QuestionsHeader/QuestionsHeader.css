@@ -18,7 +18,8 @@
 
 .question__header__fixed {
   position: fixed;
-  background: rgba(127, 254, 117, 1);
+  background: rgba(46, 204, 113, 1);
+
   color: white;
   top: 0px;
   left: 0px;
@@ -28,6 +29,8 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.3s all ease;
+  padding: 16px;
+  border-radius: 0px;
 }
 
 .question__header__fixed--show {
@@ -39,6 +42,8 @@
 .question__header__fixed--show .questions__header__reset {
   background-color: #e74c3c;
   color: white;
+  right: 16px;
+  top: 16px;
 }
 
 .questions__header__reset {
