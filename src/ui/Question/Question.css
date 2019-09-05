@@ -19,6 +19,7 @@ ol .question__card {
 .question__card {
   box-shadow: 0 0 1px rgba(240, 242, 247, 0.1), 0 6px 12px rgba(0, 32, 128, 0.1);
   padding: 24px;
+  padding-right: 26px;
   width: 100%;
   background-color: white;
   transition: 0.4s ease all;
@@ -37,7 +38,7 @@ ol .question__card {
 }
 
 .question__card--checked {
-  background-color: rgba(127, 254, 117, 0.7);
+  background-color: rgba(46, 204, 112, 0.7);
 }
 
 .question__question {
@@ -60,7 +61,7 @@ ol .question__card {
 }
 
 .question__checkbox {
-  border: 1px solid rgba(127, 254, 117, 0.7);
+  border: 1px solid rgba(46, 204, 112, 0.7);
   width: 20px;
   height: 20px;
   position: absolute;
@@ -81,7 +82,7 @@ ol .question__card {
   left: 7px;
   width: 4px;
   height: 12px;
-  border: 1px solid rgba(127, 254, 117, 1);
+  border: 1px solid rgba(46, 204, 112, 0.7);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   transition: 0.5s ease all;

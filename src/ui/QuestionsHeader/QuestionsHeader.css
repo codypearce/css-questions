@@ -18,7 +18,7 @@
 
 .question__header__fixed {
   position: fixed;
-  background: rgba(46, 204, 113, 1);
+  background: #27ae60;
 
   color: white;
   top: 0px;
@@ -31,6 +31,8 @@
   transition: 0.3s all ease;
   padding: 16px;
   border-radius: 0px;
+  font-size: 20px;
+  line-height: 22px;
 }
 
 .question__header__fixed--show {
@@ -43,7 +45,9 @@
   background-color: #e74c3c;
   color: white;
   right: 16px;
-  top: 16px;
+  top: 13px;
+  font-size: 14px;
+  padding: 6px;
 }
 
 .questions__header__reset {
