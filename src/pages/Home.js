@@ -14,10 +14,23 @@ const Home = () => {
     }
   };
 
+  const clearItems = () => {
+    setItems([]);
+  };
+
   return (
     <main className="container">
-      <QuestionsHeader items={items} questions={questions} />
-      <QuestionsHeader items={items} questions={questions} isFixed />
+      <QuestionsHeader
+        items={items}
+        questions={questions}
+        clearItems={clearItems}
+      />
+      <QuestionsHeader
+        items={items}
+        questions={questions}
+        isFixed
+        clearItems={clearItems}
+      />
       <ol>
         {questions.map(question => (
           <Question

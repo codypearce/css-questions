@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useWindowScroll from "@react-hook/window-scroll";
 import "./QuestionsHeader.css";
 
-const QuestionsHeader = ({ items, questions, isFixed }) => {
+const QuestionsHeader = ({ items, questions, isFixed, clearItems }) => {
   const scrollY = useWindowScroll(60);
   const scrollPoint = scrollY > 238;
   const fixedClass = isFixed && "question__header__fixed";
@@ -16,7 +16,9 @@ const QuestionsHeader = ({ items, questions, isFixed }) => {
       <span>
         {!items ? 0 : items.length}/{questions.length}
       </span>
-      <button className="questions__header__clear">Clear</button>
+      <button className="questions__header__clear" onClick={clearItems}>
+        Clear
+      </button>
     </div>
   );
 };
