@@ -413,7 +413,7 @@ const questions = [
     question:
       "If html and body both have height 100% and the first child element has height 100%, what happens to all the elements outside of the first child element?",
     answer:
-      "They are still rendered but they appear outside of the hmtl and body element.",
+      "They are still rendered but they appear outside of the html and body element's contained boxes.",
     position: 50,
     tags: ["elements"]
   },
@@ -435,7 +435,7 @@ const questions = [
 
   {
     id: 53,
-    question: "What value is align-items setting on it’s children elements?",
+    question: "What value does align-items set on it’s children elements?",
     answer: "align-self",
     position: 53,
     tags: ["flex"]
@@ -507,7 +507,7 @@ const questions = [
     id: 62,
     question: "What does shape-outside do?",
     answer:
-      "Allows for inline elements such as text to wrap around other elements in ways beyond rectangles",
+      "Allows for inline elements such as text to wrap around other elements in shapes beyond rectangles",
     position: 62,
     tags: ["other"]
   },
@@ -536,7 +536,7 @@ const questions = [
   },
   {
     id: 66,
-    question: "What properties can you changes with @page rule?",
+    question: "What properties can you change with @page rule?",
     answer:
       "You can only change the margins, orphans, widows, and page breaks of the document.",
     position: 66,
@@ -754,7 +754,7 @@ const questions = [
     id: 93,
     question: "What does box-decoration-break do?",
     answer:
-      "specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages",
+      "Specifies how an element's fragments should be rendered when broken across multiple lines, columns, or pages",
     position: 93,
     tags: ["box"]
   },
@@ -923,7 +923,7 @@ const questions = [
     id: 115,
     question: "When dos text-overflow take effect?",
     answer:
-      "Only why text is overflowing in the inline direction, for example, overflow: hidden white-space: nowrap; forces text on one line and overflows inline",
+      "Only when text is overflowing in the inline direction, for example, overflow: hidden white-space: nowrap; forces text on one line and overflows inline",
     position: 115,
     tags: ["overflow"]
   },
@@ -980,7 +980,8 @@ const questions = [
   {
     id: 122,
     question: "Can list-style apply to elements besides <li>s?",
-    answer: "Yes, it applies to any element with display: list-item",
+    answer:
+      "Yes, it applies to any element with the poperty display set to list-item",
     position: 121,
     tags: ["other"]
   },
@@ -1065,7 +1066,7 @@ const questions = [
   {
     id: 133,
     question:
-      "If two value syntax is given for background-position what do those values update?",
+      "If only two values are provided to background-position, what do they indicate?",
     answer: "horizontal and vertical",
     position: 133,
     tags: ["background"]
@@ -1080,7 +1081,7 @@ const questions = [
   {
     id: 135,
     question: "What does ::selection select?",
-    answer: "part of a document that has been highlighted by the user",
+    answer: "Part of a document that has been highlighted by the user",
     position: 135,
     tags: ["pseuo element"]
   },

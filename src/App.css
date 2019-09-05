@@ -87,20 +87,21 @@ ol .question__card {
   background-color: white;
   transition: 0.4s ease all;
   border-radius: 4px;
-  backface-visibility: hidden;
-  will-change: auto;
+  position: relative;
 }
 .question__card:hover {
   box-shadow: 0 0 2px rgba(240, 242, 247, 0.15),
     0 12px 24px rgba(0, 32, 128, 0.15);
   cursor: pointer;
-  /* transform: translateZ(0) scale(1.03); */
-  backface-visibility: hidden;
 }
 .question__card:active {
   box-shadow: 0 0 1px rgba(240, 242, 247, 0.1), 0 6px 12px rgba(0, 32, 128, 0.1);
   cursor: pointer;
   background-color: #f1f1f1;
+}
+
+.question__card--checked {
+  background-color: rgba(127, 254, 117, 0.7);
 }
 
 .question__question {
@@ -120,6 +121,34 @@ ol .question__card {
   display: block;
   font-size: 14px;
   margin-top: 8px;
+}
+
+.question__checkbox {
+  border: 1px solid rgba(127, 254, 117, 0.7);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  transition: 0.5s ease all;
+  background-color: transparent;
+}
+.question__checkbox--checked {
+  /* border: 1px solid white; */
+  background-color: white;
+}
+.question__checkbox--checked::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 7px;
+  width: 4px;
+  height: 12px;
+  border: 1px solid rgba(127, 254, 117, 1);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: 0.5s ease all;
 }
 
 .center {
