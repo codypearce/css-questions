@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import questions from "../questions/index";
 import Question from "../ui/Question/Question";
 import QuestionsHeader from "../ui/QuestionsHeader/QuestionsHeader";
+import createPersistedState from "use-persisted-state";
+const useItemsState = createPersistedState("items");
 
 const Home = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useItemsState([]);
 
   const handleItems = questionId => {
     if (items && items.find(item => item == questionId)) {
