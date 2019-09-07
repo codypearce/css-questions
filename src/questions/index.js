@@ -12,7 +12,7 @@ const questions = [
     id: 2,
     question: "What does LVHA mean in CSS?",
     answer:
-      "LVHA is the order of link-related pseudo-classes precendence, :link, :visited, :hover, and :active. For selectors that have equal specificity, some rules will be overridden unless you follow the LVHA order.",
+      "LVHA is the order of link-related pseudo-classes precedence, :link, :visited, :hover, and :active. For selectors that have equal specificity, some rules will be overridden unless you follow the LVHA order.",
     position: 2,
     tags: ["specificity"]
   },
@@ -44,11 +44,11 @@ const questions = [
   },
   {
     id: 6,
-    question: "Can you add ::before or ::after to an <img>?",
+    question: "Can you add ::before or ::after to an <img> element?",
     answer:
       "No, both of these pseudo elements are contained by the element's formatting box and thus a replaced element like <img> will not have ::before and ::after",
     position: 6,
-    tags: ["psuedo elements", "replaced elements"]
+    tags: ["pseudo elements", "replaced elements"]
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const questions = [
     question:
       "What happens to the vertical margin on a non-floated element when clear: both is applied?",
     answer:
-      "The vertical margins are collapsed and the element is moved below the  edge of the associated floated elements, ignoring it's own margin.",
+      "The vertical margins are collapsed and the element is moved below the  edge of the associated floated elements, ignoring its own margin.",
     position: 12,
     tags: ["float"]
   },
@@ -190,7 +190,8 @@ const questions = [
   },
   {
     id: 23,
-    question: "What two properties does “all” not affect?",
+    question:
+      "'All' resets all properties on an element except what two properties?",
     answer: "unicode-bidi and direction",
     position: 23,
     tags: ["other"]
@@ -213,9 +214,9 @@ const questions = [
   },
   {
     id: 26,
-    question: "What is required for z-index to take effect?",
+    question: "What position is required for z-index to take effect?",
     answer:
-      "Elements must be positioned (relative, absolute, etc). If it has position: static, z-index will not have an effect.",
+      "Relative, Absolute, Fixed, Sticky but not static. If it has position: static, z-index will not have an effect.",
     position: 26,
     tags: ["stacking"]
   },
@@ -223,7 +224,7 @@ const questions = [
   {
     id: 27,
     question:
-      "What are the common numeric values given to for each level of specificity. ",
+      "What are the common numeric values given for each level of specificity. ",
     answer: `Inline styles = 1000
       Id = 100
       Class,attribute, pseudo selector = 10
@@ -251,7 +252,7 @@ const questions = [
   {
     id: 30,
     question: "What are the possible keyword values for border-width?",
-    answer: "thin | medium | thick",
+    answer: "thin | medium | thick | inherit | initial",
     position: 30,
     tags: ["property values"]
   },
@@ -363,7 +364,7 @@ const questions = [
   {
     id: 44,
     question:
-      "What happens when the preferred value of the clamp() function is less than the minium value?",
+      "What happens when the preferred value of the clamp() function is less than the minimum value?",
     answer: "The minimum value will become the default then.",
     position: 44,
     tags: ["functions"]
@@ -403,7 +404,7 @@ const questions = [
     id: 49,
     question: "When are styles not inherited?",
     answer:
-      "Styles are not inherited when that particular property is explicity declared on the child element either by the user or as a browswer default. For example, <em> does not inherit borders because border-style is set to none by default.",
+      "Styles are not inherited when that particular property is explicity declared on the child element either by the user or as a browser default. For example, <em> does not inherit borders because border-style is set to none by default.",
     position: 49,
     tags: ["inheritance"]
   },
@@ -461,7 +462,7 @@ const questions = [
     question: "What are the 4 ways you can define background-size?",
     answer: "cover, contain, width, width and height",
     position: 55,
-    tags: ["propety values"]
+    tags: ["property values"]
   },
   {
     id: 57,
@@ -563,15 +564,16 @@ const questions = [
     id: 69,
     question: "What determines the position of a floated element?",
     answer:
-      "A floated element moves to the left or right of it's contianing element or to the next floated element in it's way.",
+      "A floated element moves to the left or right of it's containing element or to the next floated element in it's way.",
     position: 69,
     tags: ["float"]
   },
 
   {
     id: 70,
-    question: "What elements does the :indetermine apply to?",
-    answer: "Radio, checked, and progress",
+    question: "What elements does the :indeterminate apply to?",
+    answer:
+      "<input type='radio' />, <input type='checkbox' />, and <progress />",
     position: 70,
     tags: ["pseudo class"]
   },
@@ -587,7 +589,8 @@ const questions = [
     id: 72,
     question:
       "If an object's aspect ratio does not match its container's and it has object-fit: cover, what happens to the object?",
-    answer: "It will take up the container and be clipped to fit aspect ratio.",
+    answer:
+      "It will take up the container and be clipped to fit the aspect ratio.",
     position: 72,
     tags: ["other"]
   },
@@ -667,13 +670,13 @@ const questions = [
     id: 82,
     question:
       "If you do not set animation-fill-mode, what will happen at the end of the animation?",
-    answer: "The element will go back to it's default properties",
+    answer: "The element will go back to its default properties",
     position: 82,
     tags: ["animation"]
   },
   {
     id: 83,
-    question: "What elements does the :checked psuedo class apply to?",
+    question: "What elements does the :checked pseudo class apply to?",
     answer: "input radio, input checkbox, option",
     position: 83,
     tags: ["pseudo class"]
@@ -688,8 +691,9 @@ const questions = [
 
   {
     id: 85,
-    question: "What are the some of the ways you can indicate a color in CSS?",
-    answer: "hex, rgb, rgba, hsl, hsla, transparent, or color keyword",
+    question: "What are the different ways you can define a color value",
+    answer:
+      "hex, 8 digit hex, rgb, rgba, hsl, hsla, transparent, or color keyword, currentColor",
     position: 85,
     tags: ["color"]
   },
@@ -712,7 +716,7 @@ const questions = [
     id: 88,
     question:
       "If an element has a background-image and background-color will background color still be rendered?",
-    answer: "Yes, it will show on any transparet parts of the image.",
+    answer: "Yes, it will show on any transparent parts of the image.",
     position: 88,
     tags: ["background"]
   },
@@ -720,9 +724,9 @@ const questions = [
   {
     id: 89,
     question:
-      "What happens to border-spacing and when you set border-collapse to collapse?",
+      "What does border-spacing do when border-collapse: collapse is set?",
     answer:
-      "It doesn't apply to anything because it only works with border-collapse: separate",
+      "border-spacing doesn't apply anything because it only works with border-collapse: separate",
     position: 89,
     tags: ["border"]
   },
@@ -744,7 +748,7 @@ const questions = [
   },
   {
     id: 92,
-    question: "How do you set an element's currentColor?",
+    question: "What determines an element's currentColor value?",
     answer: "Current color is defined by the 'color' property",
     position: 92,
     tags: ["font"]
@@ -785,7 +789,7 @@ const questions = [
 
   {
     id: 97,
-    question: "What types of selectors do animation properties apply to?",
+    question: "What types of elements do animation properties apply to?",
     answer: "all elements, ::before and ::after pseudo-elements",
     position: 97,
     tags: ["animation"]
@@ -816,7 +820,8 @@ const questions = [
   {
     id: 101,
     question: "Can :first-child effect more than one element?",
-    answer: "Yes it effects each group that matches the selector",
+    answer:
+      "Yes it affects each dependent child. For example ul li:first-child will match the first ul li and the nested ul li ul li",
     position: 101,
     tags: ["pseudo class"]
   },
@@ -825,11 +830,11 @@ const questions = [
     question: "What elements does :link apply to?",
     answer: "<a>, <area>, or <link>",
     position: 102,
-    tags: ["psuedo class"]
+    tags: ["pseudo class"]
   },
   {
     id: 103,
-    question: "How many default values are there for the cursor property?",
+    question: "How many possible values for cursor are there?",
     answer: "36",
     position: 103,
     tags: ["other"]
@@ -869,7 +874,7 @@ const questions = [
   {
     id: 108,
     question:
-      "What is the difference between descendent selector and child selector?",
+      "What is the difference between a descendent selector (ul li) and child selector (ul > li)?",
     answer: "Child selector only selects immediate children",
     position: 108,
     tags: ["selectors"]
@@ -900,8 +905,8 @@ const questions = [
   {
     id: 112,
     question:
-      "For overflow to have an affect it must either have a set height or what?",
-    answer: "white-space set to nowrap.",
+      "For overflow to have an effect it must either have either a set height, set width, or what?",
+    answer: "white-space set to nowrap",
     position: 112,
     tags: ["overflow"]
   },
@@ -921,9 +926,9 @@ const questions = [
   },
   {
     id: 115,
-    question: "When dos text-overflow take effect?",
+    question: "When does text-overflow take effect?",
     answer:
-      "Only when text is overflowing in the inline direction, for example, overflow: hidden white-space: nowrap; forces text on one line and overflows inline",
+      "Only when text is overflowing on one line, not  text overflowing at the bottom of a box. This can be accomplished by applying overflow: hidden and white-space: nowrap, which forces text on one line and hides overflow.",
     position: 115,
     tags: ["overflow"]
   },
@@ -948,9 +953,9 @@ const questions = [
   {
     id: 118,
     question:
-      "If sibling element's have different flex-grow values, how are size's determined?",
+      "If sibling elements have different flex-grow values, how are sizes determined?",
     answer:
-      "As a ratio between the two values, for  example 2 and 1 will be 66% and 33% respectiably",
+      "As a ratio between the two values, for  example 2 and 1 will be 66% and 33% respectively",
     position: 118,
     tags: ["flex"]
   },
@@ -981,7 +986,7 @@ const questions = [
     id: 122,
     question: "Can list-style apply to elements besides <li>s?",
     answer:
-      "Yes, it applies to any element with the poperty display set to list-item",
+      "Yes, it applies to any element with the property display set to list-item",
     position: 121,
     tags: ["other"]
   },
@@ -1019,7 +1024,7 @@ const questions = [
   {
     id: 127,
     question: "Does ::first-line affect inline-elements?",
-    answer: "No, it only effects block level elements",
+    answer: "No, it only affects block level elements",
     position: 127,
     tags: ["pseudo element"]
   },
@@ -1050,7 +1055,7 @@ const questions = [
   {
     id: 131,
     question:
-      "If you set background-attachtment: fixed, what happens to background-origin?",
+      "If you set background-attachment: fixed, what happens to background-origin?",
     answer: "It gets ignored",
     position: 131,
     tags: ["background"]
@@ -1083,7 +1088,7 @@ const questions = [
     question: "What does ::selection select?",
     answer: "Part of a document that has been highlighted by the user",
     position: 135,
-    tags: ["pseuo element"]
+    tags: ["pseudo element"]
   },
   {
     id: 136,
@@ -1095,7 +1100,7 @@ const questions = [
 
   {
     id: 137,
-    question: "What is the default value for caption-aside?",
+    question: "What is the default value for caption-side?",
     answer: "top",
     position: 137,
     tags: ["default value"]
@@ -1109,7 +1114,7 @@ const questions = [
   },
   {
     id: 139,
-    question: "What is the intial value for flex-grow?",
+    question: "What is the initial value for flex-grow?",
     answer: 0,
     position: 139,
     tags: ["flex"]
@@ -1117,7 +1122,7 @@ const questions = [
   {
     id: 140,
     question: "What level of specificity do media queries add?",
-    answer: "They doen't add any",
+    answer: "They don't add any",
     position: 140,
     tags: ["at rules"]
   }
