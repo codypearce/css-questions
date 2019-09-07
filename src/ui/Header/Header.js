@@ -11,6 +11,12 @@ const Header = () => {
         <Link className="menu__link" to="/">
           Home
         </Link>
+        <a
+          href="https://github.com/codypearce/css-questions/issues/new"
+          className="menu__link"
+        >
+          Add Question
+        </a>
         <Link className="menu__link" to="/about">
           About
         </Link>
