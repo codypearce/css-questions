@@ -46,7 +46,7 @@ const questions = [
     id: 6,
     question: "Can you add ::before or ::after to an <img> element?",
     answer:
-      "No, both of these pseudo elements are contained by the element's formatting box and thus a replaced element like <img> will not have ::before and ::after",
+      "<img>s are replaced elements and the CSS Spec does not require or define how psuedo-elements work for replaced elements. Support is left up to browser implementations.",
     position: 6,
     tags: ["pseudo elements", "replaced elements"]
   },
@@ -842,7 +842,7 @@ const questions = [
   {
     id: 104,
     question:
-      "What is one other way of selecting the only child besides :only-child?",
+      "What is one other way of selecting an element with no siblings besides :only-child?",
     answer: ":first-child:last-child or :nth-child(1):nth-last-child(1)",
     position: 104,
     tags: ["pseudo class"]
