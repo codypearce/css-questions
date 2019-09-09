@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useWindowScroll from "@react-hook/window-scroll";
 import "./QuestionsHeader.css";
+import HeaderButtons from "./HeaderButtons/HeaderButtons";
 
 const QuestionsHeader = ({ items, questions, isFixed, resetItems }) => {
   const scrollY = useWindowScroll(60);
@@ -16,9 +17,7 @@ const QuestionsHeader = ({ items, questions, isFixed, resetItems }) => {
       <span>
         {!items ? 0 : items.length}/{questions.length}
       </span>
-      <button className="questions__header__reset" onClick={resetItems}>
-        Reset
-      </button>
+      <HeaderButtons resetItems={resetItems} />
     </div>
   );
 };
