@@ -8,6 +8,13 @@ A list of 140 CSS questions and answers. Written while reading the MDN CSS docs.
   <img width="800" src="static/site.png" alt="adf" align="center">
 </p>
 
+## LocalStorage State
+[use-persisted-state](https://github.com/donavon/use-persisted-state) allows for multi-instance, multi-tab/browser shared and persistent state so you can keep track of the questions you've already answered.
+
+<p style="margin-bottom: 0px !important;">
+  <img width="500" src="static/persistedstate.gif" alt="adf" align="center">
+</p>
+
 ## Examples
 
 Does the proximity elements have any effect on specificity? For example is 'main div' more specific than 'html div'?
@@ -17,6 +24,8 @@ What does LVHA mean in CSS?
 What does :not(\*) select?
 
 What are the three parameters the clamp() function takes?
+
+
 
 ## Why
 
