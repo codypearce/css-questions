@@ -4,11 +4,11 @@ import "./HeaderButtons.css";
 const HeaderButtons = ({ resetItems }) => {
   return (
     <div className="HeaderButtons">
-      <button className="questions__header__reset" onClick={resetItems}>
+      <button className="HeaderButtons__button" onClick={resetItems}>
         Reset
       </button>
       <button
-        className="questions__header__reset questions__header__hide"
+        className="HeaderButtons__button HeaderButtons__button--completed"
         onClick={resetItems}
       >
         Hide Completed

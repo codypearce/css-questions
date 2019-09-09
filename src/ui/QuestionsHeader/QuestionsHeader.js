@@ -14,9 +14,10 @@ const QuestionsHeader = ({ items, questions, isFixed, resetItems }) => {
     <div
       className={`questions__header ${fixedClass} ${showFixed} ${hideNoneFixed}`}
     >
-      <span>
+      {isFixed ? <div className="questions__header__spacer"></div> : null}
+      <div className="questions__header_text">
         {!items ? 0 : items.length}/{questions.length}
-      </span>
+      </div>
       <HeaderButtons resetItems={resetItems} />
     </div>
   );
