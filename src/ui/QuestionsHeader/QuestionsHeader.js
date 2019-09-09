@@ -3,7 +3,13 @@ import useWindowScroll from "@react-hook/window-scroll";
 import "./QuestionsHeader.css";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 
-const QuestionsHeader = ({ items, questions, isFixed, resetItems }) => {
+const QuestionsHeader = ({
+  items,
+  questions,
+  isFixed,
+  resetItems,
+  toggleHideCompleted
+}) => {
   const scrollY = useWindowScroll(60);
   const scrollPoint = scrollY > 238;
   const fixedClass = isFixed && "question__header__fixed";
@@ -18,7 +24,10 @@ const QuestionsHeader = ({ items, questions, isFixed, resetItems }) => {
       <div className="questions__header_text">
         {!items ? 0 : items.length}/{questions.length}
       </div>
-      <HeaderButtons resetItems={resetItems} />
+      <HeaderButtons
+        resetItems={resetItems}
+        toggleHideCompleted={toggleHideCompleted}
+      />
     </div>
   );
 };

@@ -15,6 +15,7 @@
   justify-content: space-between;
   width: 100%;
   padding-left: 56px;
+  padding-right: 0px;
 }
 
 .question__header--hide {

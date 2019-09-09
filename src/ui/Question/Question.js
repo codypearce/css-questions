@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import Collapsible from "../Collapsible";
 import "./Question.css";
 
-const Question = ({ question, handleItems, items }) => {
+const Question = ({ question, handleItems, items, hideCompleted }) => {
   const [hidden, setHidden] = useState(true);
   const isSelected = items && items.find(item => item == question.id);
+
   return (
-    <div className={`question`}>
+    <div
+      className={`question ${
+        hideCompleted && isSelected ? "question--hidden" : ""
+      }`}
+    >
       <div className="question__number">{question.position}</div>
       <li
         className={`question__card ${isSelected && "question__card--checked"}`}

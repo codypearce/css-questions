@@ -7,6 +7,7 @@ const useItemsState = createPersistedState("items");
 
 const Home = () => {
   const [items, setItems] = useItemsState([]);
+  const [hideCompleted, setHideCompleted] = useState(false);
 
   const handleItems = questionId => {
     if (items && items.find(item => item == questionId)) {
@@ -20,25 +21,33 @@ const Home = () => {
     setItems([]);
   };
 
+  const toggleHideCompleted = () => {
+    setHideCompleted(!hideCompleted);
+  };
+
   return (
     <main className="container">
       <QuestionsHeader
         items={items}
         questions={questions}
         resetItems={resetItems}
+        toggleHideCompleted={toggleHideCompleted}
       />
       <QuestionsHeader
         items={items}
         questions={questions}
         isFixed
         resetItems={resetItems}
+        toggleHideCompleted={toggleHideCompleted}
       />
       <ol>
         {questions.map(question => (
           <Question
+            key={question.id}
             question={question}
             handleItems={handleItems}
             items={items}
+            hideCompleted={hideCompleted}
           />
         ))}
       </ol>

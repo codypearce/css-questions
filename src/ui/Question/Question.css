@@ -3,6 +3,13 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 26px;
+  transition: 0.5s ease opacity;
+  opacity: 1;
+}
+
+.question--hidden {
+  display: none;
+  opacity: 0;
 }
 
 .question__number {
