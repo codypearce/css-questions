@@ -4,10 +4,11 @@ import Question from "../ui/Question/Question";
 import QuestionsHeader from "../ui/QuestionsHeader/QuestionsHeader";
 import createPersistedState from "use-persisted-state";
 const useItemsState = createPersistedState("items");
+const useHideState = createPersistedState("hideCompleted");
 
 const Home = () => {
   const [items, setItems] = useItemsState([]);
-  const [hideCompleted, setHideCompleted] = useState(false);
+  const [hideCompleted, setHideCompleted] = useHideState(false);
 
   const handleItems = questionId => {
     if (items && items.find(item => item == questionId)) {
