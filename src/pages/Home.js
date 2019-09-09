@@ -32,6 +32,7 @@ const Home = () => {
         questions={questions}
         resetItems={resetItems}
         toggleHideCompleted={toggleHideCompleted}
+        hideCompleted={hideCompleted}
       />
       <QuestionsHeader
         items={items}
@@ -39,6 +40,7 @@ const Home = () => {
         isFixed
         resetItems={resetItems}
         toggleHideCompleted={toggleHideCompleted}
+        hideCompleted={hideCompleted}
       />
       <ol>
         {questions.map(question => (

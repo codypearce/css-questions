@@ -8,7 +8,8 @@ const QuestionsHeader = ({
   questions,
   isFixed,
   resetItems,
-  toggleHideCompleted
+  toggleHideCompleted,
+  hideCompleted
 }) => {
   const scrollY = useWindowScroll(60);
   const scrollPoint = scrollY > 238;
@@ -27,6 +28,7 @@ const QuestionsHeader = ({
       <HeaderButtons
         resetItems={resetItems}
         toggleHideCompleted={toggleHideCompleted}
+        hideCompleted={hideCompleted}
       />
     </div>
   );

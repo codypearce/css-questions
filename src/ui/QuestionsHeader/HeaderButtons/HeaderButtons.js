@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeaderButtons.css";
 
-const HeaderButtons = ({ resetItems, toggleHideCompleted }) => {
+const HeaderButtons = ({ resetItems, toggleHideCompleted, hideCompleted }) => {
   return (
     <div className="HeaderButtons">
       <button className="HeaderButtons__button" onClick={resetItems}>
@@ -11,7 +11,7 @@ const HeaderButtons = ({ resetItems, toggleHideCompleted }) => {
         className="HeaderButtons__button HeaderButtons__button--completed"
         onClick={toggleHideCompleted}
       >
-        Hide Completed
+        {hideCompleted ? "Show" : "Hide"} Done
       </button>
     </div>
   );
